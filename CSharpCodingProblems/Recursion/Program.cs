@@ -31,6 +31,24 @@
             Console.WriteLine();
             Console.WriteLine("-----------------------------------------------------------------");
             Console.ReadKey();
+
+            //Problem 4: Find the sum of first n natural numbers:
+
+            int numberToSum = 10;
+
+            Console.WriteLine($"The sum of {numberToSum} is {PrintNumSum(numberToSum)}");
+            Console.WriteLine("-----------------------------------------------------------------");
+            Console.ReadKey();
+        }
+
+        private static int PrintNumSum(int n)
+        {
+            if (n == 1)
+            {
+                return 1;
+            }
+
+            return n + PrintNumSum(n - 1);
         }
 
         private static void PrintNumbers(int n)
