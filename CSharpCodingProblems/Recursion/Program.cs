@@ -59,6 +59,33 @@
             Console.WriteLine();
             Console.WriteLine("-----------------------------------------------------------------");
             Console.ReadKey();
+
+            //Problem 7: Print even or odd numbers in a given range:
+
+            int start = 1;
+            int end = 20;
+
+            EvenAndOddNumbers(start, end);
+            Console.WriteLine();
+            Console.WriteLine("-----------------------------------------------------------------");
+            Console.ReadKey();
+        }
+
+        private static void EvenAndOddNumbers(int start, int end)
+        {
+            if (end == 0)
+            {
+                return;
+            }
+
+            if (start % 2 != 0)
+            {
+                Console.Write(" {0} ", start);
+                EvenAndOddNumbers(++start, end);
+            }
+
+            Console.Write(" {0} ", end);
+            EvenAndOddNumbers(start, --end);
         }
 
         //Problem 6:
