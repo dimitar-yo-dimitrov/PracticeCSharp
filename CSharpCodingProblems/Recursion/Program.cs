@@ -49,6 +49,27 @@
             Console.WriteLine();
             Console.WriteLine("-----------------------------------------------------------------");
             Console.ReadKey();
+
+            //Problem 6: Count the number of digits in a number:
+
+            int numForCount = 123567;
+            int count = 0;
+
+            Console.WriteLine($"Count the number of {numForCount} is {Count(numForCount, count)}");
+            Console.WriteLine();
+            Console.WriteLine("-----------------------------------------------------------------");
+            Console.ReadKey();
+        }
+
+        //Problem 6:
+        private static int Count(int n, int count)
+        {
+            if (n == 0)
+            {
+                return count;
+            }
+
+            return Count(n / 10, ++count);
         }
 
         //Problem 5:
