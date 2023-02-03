@@ -91,7 +91,7 @@
             Console.WriteLine("-----------------------------------------------------------------");
             Console.ReadKey();
 
-            // Problem 9: Check whether a given string is Palindrome
+            //Problem 9: Check whether a given string is Palindrome:
 
             string text = "Rotator";
             bool isTrue;
@@ -105,7 +105,37 @@
 
             Console.WriteLine("-----------------------------------------------------------------");
             Console.ReadKey();
+
+            //Problem 10: Find the Fibonacci numbers:
+
+            int numFibonacci = 10;
+
+            for (int i = 0; i < numFibonacci; i++)
+            {
+                Console.Write(" {0} ", FibonacciNumber(i));
+            }
+
+            Console.WriteLine();
+            Console.WriteLine("-----------------------------------------------------------------");
+            Console.ReadKey();
         }
+
+        private static int FibonacciNumber(int n)
+        {
+            int numA = 0;
+            int numB = 1;
+
+            for (int i = 0; i < n; i++)
+            {
+                int temp = numA;
+                numA = numB;
+                numB = temp + numB;
+            }
+
+            return numA;
+        }
+
+        //Methods with Recursion:
 
         //Problem 9:
         private static bool IsPalindrome(string text)
