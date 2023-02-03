@@ -19,6 +19,7 @@
 
             // Call recursive method with two parameters.	
             PrintNatural(startValue, numNatural);
+
             Console.WriteLine();
             Console.WriteLine("-----------------------------------------------------------------");
             Console.ReadKey();
@@ -28,6 +29,7 @@
             int number = 10;
 
             PrintNumbers(number);
+
             Console.WriteLine();
             Console.WriteLine("-----------------------------------------------------------------");
             Console.ReadKey();
@@ -37,6 +39,7 @@
             int numberToSum = 10;
 
             Console.WriteLine($"The sum of {numberToSum} is {PrintNumSum(numberToSum)}");
+
             Console.WriteLine("-----------------------------------------------------------------");
             Console.ReadKey();
 
@@ -46,6 +49,7 @@
             var reverseNum = string.Join("", Math.Abs(num).ToString().Reverse());
 
             PrintIndividualNum(int.Parse(reverseNum));
+
             Console.WriteLine();
             Console.WriteLine("-----------------------------------------------------------------");
             Console.ReadKey();
@@ -56,6 +60,7 @@
             int count = 0;
 
             Console.WriteLine($"Count the number of {numForCount} is {Count(numForCount, count)}");
+
             Console.WriteLine();
             Console.WriteLine("-----------------------------------------------------------------");
             Console.ReadKey();
@@ -66,17 +71,36 @@
 
             Console.WriteLine($"All even numbers from 1 to {n} are :");
             EvenAndOddNumbers(2, n);
+
             Console.WriteLine();
 
             Console.WriteLine($"All odd numbers from 1 to {n} are :");
             EvenAndOddNumbers(1, n);
+
             Console.WriteLine();
 
             Console.WriteLine("-----------------------------------------------------------------");
             Console.ReadKey();
+
+            //Problem 6: Check whether a number is prime:
+
+            int numPrime = 96;
+
+            PrimeNumber(numPrime);
+
+            Console.WriteLine();
+            Console.WriteLine("-----------------------------------------------------------------");
+            Console.ReadKey();
         }
 
-        //Recursion Methods
+        //Problem 8:
+        private static void PrimeNumber(int n)
+        {
+            Console.WriteLine(
+                n % 2 == 1
+                    ? $"The number {n} is a Prime number"
+                    : $"The number {n} is not a Prime number");
+        }
 
         //Problem 7:
         private static void EvenAndOddNumbers(int startValue, int n)
