@@ -78,22 +78,53 @@
             EvenAndOddNumbers(1, n);
 
             Console.WriteLine();
-
             Console.WriteLine("-----------------------------------------------------------------");
             Console.ReadKey();
 
-            //Problem 6: Check whether a number is prime:
+            //Problem 8: Check whether a number is prime:
 
-            int numPrime = 96;
+            int numPrime = 23;
 
             PrimeNumber(numPrime);
 
             Console.WriteLine();
             Console.WriteLine("-----------------------------------------------------------------");
             Console.ReadKey();
+
+            // Problem 9: Check whether a given string is Palindrome
+
+            string text = "Rotator";
+            bool isTrue;
+
+            isTrue = IsPalindrome(text.ToLower());
+
+            Console.WriteLine(
+                isTrue
+                    ? "The string is Palindrome.\n"
+                    : "The string is not a Palindrome.\n");
+
+            Console.WriteLine("-----------------------------------------------------------------");
+            Console.ReadKey();
+        }
+
+        //Problem 9:
+        private static bool IsPalindrome(string text)
+        {
+            if (text.Length <= 1)
+            {
+                return true;
+            }
+
+            if (text[0] != text[text.Length - 1])
+            {
+                return false;
+            }
+
+            return IsPalindrome(text.Substring(1, text.Length - 2));
         }
 
         //Problem 8:
+        // This method has no Recursion
         private static void PrimeNumber(int n)
         {
             Console.WriteLine(
