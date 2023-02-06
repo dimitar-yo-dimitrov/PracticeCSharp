@@ -5,7 +5,9 @@ VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Recursion", "Recursion\Recursion.csproj", "{773E8C6F-739B-4380-8B82-AF637C3282F6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Function", "Function\Function.csproj", "{83280624-8987-42CC-8B6F-4C44036FAAFD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Function", "Function\Function.csproj", "{83280624-8987-42CC-8B6F-4C44036FAAFD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LINQ", "LINQ\LINQ.csproj", "{66580C19-29B9-496C-A0AE-22FC22DB4A5F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{83280624-8987-42CC-8B6F-4C44036FAAFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{83280624-8987-42CC-8B6F-4C44036FAAFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{83280624-8987-42CC-8B6F-4C44036FAAFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66580C19-29B9-496C-A0AE-22FC22DB4A5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66580C19-29B9-496C-A0AE-22FC22DB4A5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66580C19-29B9-496C-A0AE-22FC22DB4A5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66580C19-29B9-496C-A0AE-22FC22DB4A5F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
