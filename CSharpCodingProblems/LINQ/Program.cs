@@ -192,6 +192,30 @@
 
             Console.WriteLine("-----------------------------------------------------------------");
             Console.ReadKey();
+
+            //Problem 8: Find the string which starts and ends with a specific character:
+
+            string[] cities =
+                { "ROME", "LONDON", "NAIROBI", "CALIFORNIA", "ZURICH", "NEW DELHI", "AMSTERDAM", "ABU DHABI", "PARIS" };
+
+            Console.WriteLine($"The cities are: {string.Join(", ", cities)}");
+            Console.WriteLine("Input starting character for the string: A");
+            Console.WriteLine("Input ending character for the string: M");
+            Console.WriteLine();
+
+            foreach (var city in cities)
+            {
+                var firstChar = city.First();
+                var lastChar = city.Substring(city.Length - 1);
+
+                if (firstChar == 'A' && char.Parse(lastChar) == 'M')
+                {
+                    Console.WriteLine($"The city starting with A and ending with M is: {city}");
+                }
+            }
+
+            Console.WriteLine("-----------------------------------------------------------------");
+            Console.ReadKey();
         }
     }
 }
