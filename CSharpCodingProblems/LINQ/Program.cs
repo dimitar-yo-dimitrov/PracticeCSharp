@@ -177,7 +177,6 @@
             Console.WriteLine("The numbers in the array are:");
             Console.Write(string.Join(", ", numsFromArray));
             Console.WriteLine();
-
             Console.WriteLine("\nNumber Number*Frequency Frequency");
             Console.WriteLine("-----------------------------------------------------------------");
 
@@ -213,6 +212,18 @@
                     Console.WriteLine($"The city starting with A and ending with M is: {city}");
                 }
             }
+
+            Console.WriteLine("-----------------------------------------------------------------");
+            Console.ReadKey();
+
+            List<int> numbers7 = new List<int> { 55, 200, 740, 76, 230, 482, 95 };
+
+            Console.WriteLine("The numbers greater than 80 are:");
+            Console.WriteLine();
+
+            var numbersResult = numbers7.Where(n => n > 80);
+
+            Console.WriteLine(string.Join("\n", numbersResult));
 
             Console.WriteLine("-----------------------------------------------------------------");
             Console.ReadKey();
