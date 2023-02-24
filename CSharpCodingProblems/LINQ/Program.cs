@@ -47,7 +47,7 @@
             Console.WriteLine("-----------------------------------------------------------------");
             Console.ReadKey();
 
-            //Problem 3: Display the number and frequency of number from giving array:
+            //Problem 4: Display the number and frequency of number from giving array:
 
             //Solution without LINQ: 
             int[] numbers4 = { 3, 4, 5, 12, 18, 24, 5, 8, 3, 4, 4, 12, 18 };
@@ -59,7 +59,7 @@
                 uniqueNumber.Add(numbers4[i]);
             }
 
-            int count = 0;
+            int countNum = 0;
 
             Console.WriteLine("The number and the Frequency are:");
 
@@ -69,13 +69,13 @@
                 {
                     if (numberA == numberB)
                     {
-                        count++;
+                        countNum++;
                     }
                 }
 
-                Console.WriteLine($"Number {numberA} appears {count} times");
+                Console.WriteLine($"Number {numberA} appears {countNum} times");
 
-                count = 0;
+                countNum = 0;
             }
 
             Console.WriteLine("-----------------------------------------------------------------");
@@ -94,6 +94,59 @@
             foreach (var number in n)
             {
                 Console.WriteLine($"Number {number.Key} appears {number.Count()} times");
+            }
+
+            Console.WriteLine("-----------------------------------------------------------------");
+            Console.ReadKey();
+
+            //Problem 5: Display the characters and frequency of character from giving string:
+
+            //Solution without LINQ:
+
+            string characters = "apple";
+
+            HashSet<char> uniqueChars = new HashSet<char>();
+
+            for (int i = 0; i < characters.Length; i++)
+            {
+                uniqueChars.Add(characters[i]);
+            }
+
+            int countChar = 0;
+
+            Console.WriteLine("The frequency of the characters are:");
+
+            foreach (var charA in uniqueChars)
+            {
+                foreach (var charB in characters)
+                {
+                    if (charA == charB)
+                    {
+                        countChar++;
+                    }
+                }
+
+                Console.WriteLine($"Character {charA}: {countChar} times");
+
+                countChar = 0;
+            }
+
+            Console.WriteLine("-----------------------------------------------------------------");
+            Console.ReadKey();
+
+            //Solution with LINQ:
+
+            string charactersForLinq = "apple";
+
+            var charItems = from x in charactersForLinq
+                            group x by x into y
+                            select y;
+
+            Console.WriteLine("The frequency of the characters are:");
+
+            foreach (var item in charItems)
+            {
+                Console.WriteLine($"Character {item.Key}: {item.Count()} times");
             }
 
             Console.WriteLine("-----------------------------------------------------------------");
