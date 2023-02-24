@@ -166,6 +166,32 @@
 
             Console.WriteLine("-----------------------------------------------------------------");
             Console.ReadKey();
+
+            //Problem 7: Display numbers, multiplication of number with frequency and frequency of a number of giving array:
+
+            int[] numbers6 = { 5, 1, 9, 2, 3, 7, 4, 5, 6, 8, 7, 6, 3, 4, 5, 2 };
+
+            var numsFromArray = from x in numbers6
+                                select x;
+
+            Console.WriteLine("The numbers in the array are:");
+            Console.Write(string.Join(", ", numsFromArray));
+            Console.WriteLine();
+
+            Console.WriteLine("\nNumber Number*Frequency Frequency");
+            Console.WriteLine("-----------------------------------------------------------------");
+
+            var nums = from x in numbers6
+                       group x by x into y
+                       select y;
+
+            foreach (var num in nums)
+            {
+                Console.WriteLine($"{num.Key} {num.Key * num.Count()} {num.Count()}");
+            }
+
+            Console.WriteLine("-----------------------------------------------------------------");
+            Console.ReadKey();
         }
     }
 }
