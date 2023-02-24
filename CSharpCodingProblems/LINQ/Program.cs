@@ -151,6 +151,21 @@
 
             Console.WriteLine("-----------------------------------------------------------------");
             Console.ReadKey();
+
+            //Problem 6: Display the name of the days of a week:
+
+            string[] daysOfWeek = { "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" };
+
+            var days = from weekDay in daysOfWeek
+                       select weekDay;
+
+            foreach (var day in days)
+            {
+                Console.WriteLine(day);
+            }
+
+            Console.WriteLine("-----------------------------------------------------------------");
+            Console.ReadKey();
         }
     }
 }
