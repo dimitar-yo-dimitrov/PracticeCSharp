@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Recursion", "Recursion\Recu
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Function", "Function\Function.csproj", "{83280624-8987-42CC-8B6F-4C44036FAAFD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LINQ", "LINQ\LINQ.csproj", "{66580C19-29B9-496C-A0AE-22FC22DB4A5F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LINQ", "LINQ\LINQ.csproj", "{66580C19-29B9-496C-A0AE-22FC22DB4A5F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicAlgorithm", "BasicAlgorithm\BasicAlgorithm.csproj", "{4A11724F-A6A9-4DE0-A3EA-D0EA09C70FE7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{66580C19-29B9-496C-A0AE-22FC22DB4A5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{66580C19-29B9-496C-A0AE-22FC22DB4A5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{66580C19-29B9-496C-A0AE-22FC22DB4A5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A11724F-A6A9-4DE0-A3EA-D0EA09C70FE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A11724F-A6A9-4DE0-A3EA-D0EA09C70FE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A11724F-A6A9-4DE0-A3EA-D0EA09C70FE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A11724F-A6A9-4DE0-A3EA-D0EA09C70FE7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
