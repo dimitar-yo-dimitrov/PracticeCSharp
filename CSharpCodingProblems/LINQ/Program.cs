@@ -194,6 +194,8 @@
 
             //Problem 8: Find the string which starts and ends with a specific character:
 
+            //Solution 1:
+
             string[] cities =
                 { "ROME", "LONDON", "NAIROBI", "CALIFORNIA", "ZURICH", "NEW DELHI", "AMSTERDAM", "ABU DHABI", "PARIS" };
 
@@ -215,6 +217,31 @@
 
             Console.WriteLine("-----------------------------------------------------------------");
             Console.ReadKey();
+
+            //Solution 2:
+
+            char charStart, charEnd;
+
+            charStart = 'A';
+            charEnd = 'M';
+
+            string[] towns =
+                { "ROME", "LONDON", "NAIROBI", "CALIFORNIA", "ZURICH", "NEW DELHI", "AMSTERDAM", "ABU DHABI", "PARIS" };
+
+            var _result = from x in towns
+                          where x.StartsWith(charStart)
+                          where x.EndsWith(charEnd)
+                          select x;
+
+            foreach (var town in _result)
+            {
+                Console.WriteLine($"The city starting with A and ending with M is: {town}");
+            }
+
+            Console.WriteLine("-----------------------------------------------------------------");
+            Console.ReadKey();
+
+            //Problem 9: Create a list of numbers and display the numbers greater than 80 as output:
 
             List<int> numbers7 = new List<int> { 55, 200, 740, 76, 230, 482, 95 };
 
