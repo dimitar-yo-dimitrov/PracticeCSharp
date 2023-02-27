@@ -241,7 +241,7 @@
             Console.WriteLine("-----------------------------------------------------------------");
             Console.ReadKey();
 
-            //Problem 9: Create a list of numbers and display the numbers greater than 80 as output:
+            //Problem 9: Create a list of numbers and output the numbers greater than the given number:
 
             //Solution 1:
             List<int> numbers7 = new List<int> { 55, 200, 740, 76, 230, 482, 95 };
@@ -266,9 +266,27 @@
             Console.WriteLine();
 
             var resultNumbers = numbers7
-                .Find(n => n > levelNum);
+                .FindAll(n => n > levelNum);
 
             Console.WriteLine(string.Join("\n", resultNumbers));
+
+            Console.WriteLine("-----------------------------------------------------------------");
+            Console.ReadKey();
+
+            //Problem 10: Display the top n-th records:
+
+            List<int> numbers8 = new List<int> { 55, 200, 740, 76, 230, 482, 95 };
+
+            int countForTake = 3;
+
+            Console.WriteLine("The top 3 records from the list are:");
+            Console.WriteLine();
+
+            var resultNum = numbers8
+                .OrderByDescending(n => n)
+                .Take(countForTake);
+
+            Console.WriteLine(string.Join("\n", resultNum));
 
             Console.WriteLine("-----------------------------------------------------------------");
             Console.ReadKey();
