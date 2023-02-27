@@ -228,10 +228,10 @@
             string[] towns =
                 { "ROME", "LONDON", "NAIROBI", "CALIFORNIA", "ZURICH", "NEW DELHI", "AMSTERDAM", "ABU DHABI", "PARIS" };
 
-            var _result = from x in towns
-                          where x.StartsWith(charStart)
-                          where x.EndsWith(charEnd)
-                          select x;
+            var _result = from t in towns
+                          where t.StartsWith(charStart)
+                          where t.EndsWith(charEnd)
+                          select t;
 
             foreach (var town in _result)
             {
@@ -243,14 +243,32 @@
 
             //Problem 9: Create a list of numbers and display the numbers greater than 80 as output:
 
+            //Solution 1:
             List<int> numbers7 = new List<int> { 55, 200, 740, 76, 230, 482, 95 };
+
+            int levelNum = 80;
 
             Console.WriteLine("The numbers greater than 80 are:");
             Console.WriteLine();
 
-            var numbersResult = numbers7.Where(n => n > 80);
+            var numbersResult = numbers7.Where(n => n > levelNum);
 
             Console.WriteLine(string.Join("\n", numbersResult));
+
+            Console.WriteLine("-----------------------------------------------------------------");
+            Console.ReadKey();
+
+            //Solution 2:
+
+            levelNum = 59;
+
+            Console.WriteLine("The numbers greater than 59 are:");
+            Console.WriteLine();
+
+            var resultNumbers = numbers7
+                .Find(n => n > levelNum);
+
+            Console.WriteLine(string.Join("\n", resultNumbers));
 
             Console.WriteLine("-----------------------------------------------------------------");
             Console.ReadKey();
