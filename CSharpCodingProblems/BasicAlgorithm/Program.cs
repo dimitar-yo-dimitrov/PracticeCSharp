@@ -19,6 +19,21 @@
             Console.WriteLine(TakeDifference(55));
             Console.WriteLine("-----------------------------------------------------------------");
             Console.ReadKey();
+
+            //Problem 3:Check two given integers, and return true if one of them is 30 or if their sum is 30:
+
+            Console.WriteLine(CheckIntegers(30, 2));
+            Console.WriteLine(CheckIntegers(22, 2));
+            Console.WriteLine(CheckIntegers(28, 2));
+            Console.WriteLine(CheckIntegers(5, 30));
+            Console.WriteLine(CheckIntegers(30, 30));
+            Console.WriteLine("-----------------------------------------------------------------");
+            Console.ReadKey();
+        }
+
+        private static bool CheckIntegers(int x, int y)
+        {
+            return x == 30 || y == 30 || (x + y == 30);
         }
 
         private static int TakeDifference(int n)
