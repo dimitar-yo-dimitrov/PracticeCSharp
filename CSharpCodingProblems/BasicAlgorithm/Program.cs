@@ -59,6 +59,22 @@
             Console.WriteLine(RemoveChar("Python", 4));
             Console.WriteLine("-----------------------------------------------------------------");
             Console.ReadKey();
+
+            //Problem 7: Exchange the first and last characters in a given string and return the new string:
+
+            Console.WriteLine("Problem 7:");
+            Console.WriteLine(ReplaceChar("abcd"));
+            Console.WriteLine(ReplaceChar("a"));
+            Console.WriteLine(ReplaceChar("xy"));
+            Console.WriteLine("-----------------------------------------------------------------");
+            Console.ReadKey();
+        }
+
+        private static string ReplaceChar(string input)
+        {
+            return input.Length > 1
+                ? input.Substring(input.Length - 1) + input.Substring(1, input.Length - 2) + input.Substring(0, 1)
+                : input;
         }
 
         private static string RemoveChar(string item, int index)
