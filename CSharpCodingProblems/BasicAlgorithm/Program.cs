@@ -41,6 +41,22 @@
             Console.WriteLine(IntegerInRange(89));
             Console.WriteLine("-----------------------------------------------------------------");
             Console.ReadKey();
+
+            //Problem 5: Create a new string where 'if' is added to the front of a given string. If the string already begins with 'if', return the string unchanged:
+
+            Console.WriteLine("Problem 5:");
+            Console.WriteLine(CreateString("if else"));
+            Console.WriteLine(CreateString("if else else"));
+            Console.WriteLine(CreateString("else"));
+            Console.WriteLine("-----------------------------------------------------------------");
+            Console.ReadKey();
+        }
+
+        private static string CreateString(string input)
+        {
+            var parts = input.Split(" ");
+
+            return parts[0] != "if" ? input.Insert(0, "if ") : input;
         }
 
         private static bool IntegerInRange(int n)
