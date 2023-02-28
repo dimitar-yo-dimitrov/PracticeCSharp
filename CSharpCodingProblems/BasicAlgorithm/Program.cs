@@ -50,6 +50,22 @@
             Console.WriteLine(CreateString("else"));
             Console.WriteLine("-----------------------------------------------------------------");
             Console.ReadKey();
+
+            //Problem 6: Remove the character in a given position of a given string. The given position will be in the range 0.. string length -1 inclusive:
+
+            Console.WriteLine("Problem 6:");
+            Console.WriteLine(RemoveChar("Python", 1));
+            Console.WriteLine(RemoveChar("Python", 0));
+            Console.WriteLine(RemoveChar("Python", 4));
+            Console.WriteLine("-----------------------------------------------------------------");
+            Console.ReadKey();
+        }
+
+        private static string RemoveChar(string item, int index)
+        {
+            var result = item.Remove(index, 1);
+
+            return result;
         }
 
         private static string CreateString(string input)
