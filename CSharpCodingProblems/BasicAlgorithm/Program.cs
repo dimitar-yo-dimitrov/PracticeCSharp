@@ -36,17 +36,16 @@
             //Problem 4: Check a given integer and return true if it is within 10 of 100 or 200:
 
             Console.WriteLine("Problem 4:");
-            Console.WriteLine(IntegerInRange(7));
-            Console.WriteLine(IntegerInRange(51));
-            Console.WriteLine(IntegerInRange(55));
-            Console.WriteLine(IntegerInRange(200));
+            Console.WriteLine(IntegerInRange(103));
+            Console.WriteLine(IntegerInRange(90));
+            Console.WriteLine(IntegerInRange(89));
             Console.WriteLine("-----------------------------------------------------------------");
             Console.ReadKey();
         }
 
         private static bool IntegerInRange(int n)
         {
-            return n is > 10 and < 100 or 200;
+            return Math.Abs(n - 100) <= 10 || Math.Abs(n - 200) <= 10;
         }
 
         private static bool CheckIntegers(int x, int y)
