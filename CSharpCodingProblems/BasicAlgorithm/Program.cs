@@ -105,7 +105,21 @@
 
             Console.WriteLine("-----------------------------------------------------------------");
             Console.ReadKey();
+
+            //Problem 9: Create a new string with the last char added at the front and back of a given string of length 1 or more:
+
+            Console.WriteLine(CreateNewString("C Sharp"));
+            Console.WriteLine(CreateNewString("JS"));
+            Console.WriteLine(CreateNewString("S"));
+
+            Console.WriteLine("-----------------------------------------------------------------");
+            Console.ReadKey();
         }
+
+        private static string CreateNewString(string text)
+            => //string.Format("{0}{1}{0}", text[^1..], text);
+               // text[^1..] + text + text[^1..];
+              text.Substring(text.Length - 1) + text + text.Substring(text.Length - 1);
 
         private static string CreateWithSubstring(string text)
         {
