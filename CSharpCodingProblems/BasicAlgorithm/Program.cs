@@ -114,12 +114,25 @@
 
             Console.WriteLine("-----------------------------------------------------------------");
             Console.ReadKey();
+
+            // Problem 10: Check if a given positive number is a multiple of 3 or a multiple of 7:
+
+            Console.WriteLine(CheckNumber(3));
+            Console.WriteLine(CheckNumber(14));
+            Console.WriteLine(CheckNumber(12));
+            Console.WriteLine(CheckNumber(37));
+
+            Console.WriteLine("-----------------------------------------------------------------");
+            Console.ReadKey();
         }
 
+        private static bool CheckNumber(int n)
+            => (n / 3) * 3 == n || (n / 7) * 7 == n;
+
         private static string CreateNewString(string text)
-            => //string.Format("{0}{1}{0}", text[^1..], text);
-               // text[^1..] + text + text[^1..];
-              text.Substring(text.Length - 1) + text + text.Substring(text.Length - 1);
+            => string.Format("{0}{1}{0}", text[^1..], text);
+        // text[^1..] + text + text[^1..];
+        // text.Substring(text.Length - 1) + text + text.Substring(text.Length - 1);
 
         private static string CreateWithSubstring(string text)
         {
