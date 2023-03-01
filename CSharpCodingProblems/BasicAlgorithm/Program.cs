@@ -115,7 +115,7 @@
             Console.WriteLine("-----------------------------------------------------------------");
             Console.ReadKey();
 
-            // Problem 10: Check if a given positive number is a multiple of 3 or a multiple of 7:
+            //Problem 10: Check if a given positive number is a multiple of 3 or a multiple of 7:
 
             Console.WriteLine(CheckNumber(3));
             Console.WriteLine(CheckNumber(14));
@@ -124,7 +124,20 @@
 
             Console.WriteLine("-----------------------------------------------------------------");
             Console.ReadKey();
+
+            //Problem 11: Check if a given string starts with 'C#' or not:
+
+            Console.WriteLine(CheckIfStartWith("C# Sharp"));
+            Console.WriteLine(CheckIfStartWith("C#"));
+            Console.WriteLine(CheckIfStartWith("C"));
+            Console.WriteLine(CheckIfStartWith(""));
+
+            Console.WriteLine("-----------------------------------------------------------------");
+            Console.ReadKey();
         }
+
+        private static bool CheckIfStartWith(string text)
+            => text.StartsWith("C#");
 
         private static bool CheckNumber(int n)
             => (n / 3) * 3 == n || (n / 7) * 7 == n;
