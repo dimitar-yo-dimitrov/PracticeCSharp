@@ -73,7 +73,7 @@
         private static string ReplaceChar(string input)
         {
             return input.Length > 1
-                ? input.Substring(input.Length - 1) + input.Substring(1, input.Length - 2) + input.Substring(0, 1)
+                ? input[^1..] + input.Substring(1, input.Length - 2) + input[..1]
                 : input;
         }
 

@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LINQ", "LINQ\LINQ.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicAlgorithm", "BasicAlgorithm\BasicAlgorithm.csproj", "{4A11724F-A6A9-4DE0-A3EA-D0EA09C70FE7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IndicesAndRanges", "IndicesAndRanges\IndicesAndRanges.csproj", "{FA7579D0-B7CF-44CE-9FFA-74BADFCB6E75}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{4A11724F-A6A9-4DE0-A3EA-D0EA09C70FE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4A11724F-A6A9-4DE0-A3EA-D0EA09C70FE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4A11724F-A6A9-4DE0-A3EA-D0EA09C70FE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA7579D0-B7CF-44CE-9FFA-74BADFCB6E75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA7579D0-B7CF-44CE-9FFA-74BADFCB6E75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA7579D0-B7CF-44CE-9FFA-74BADFCB6E75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA7579D0-B7CF-44CE-9FFA-74BADFCB6E75}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
