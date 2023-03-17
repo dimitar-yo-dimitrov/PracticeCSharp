@@ -153,7 +153,22 @@
 
             Console.WriteLine("-----------------------------------------------------------------");
             Console.ReadKey();
+
+            //Problem 13: Check two given integers whether either of them is in the range 100..200 inclusive:
+
+            Console.WriteLine("Problem 13:");
+
+            Console.WriteLine(CheckRange(100, 199));
+            Console.WriteLine(CheckRange(250, 300));
+            Console.WriteLine(CheckRange(105, -190));
+            Console.WriteLine(CheckRange(-105, 190));
+
+            Console.WriteLine("-----------------------------------------------------------------");
+            Console.ReadKey();
         }
+
+        private static bool CheckRange(int numA, int numB)
+            => numA is >= 100 and <= 200 || numB is >= 100 and <= 200;
 
         private static bool CheckRangeTemperature(int t0, int t1)
             => t0 is < 0 or > 100 && t1 is < 0 or > 100;
