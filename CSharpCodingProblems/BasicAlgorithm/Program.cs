@@ -108,6 +108,8 @@
 
             //Problem 9: Create a new string with the last char added at the front and back of a given string of length 1 or more:
 
+            Console.WriteLine("Problem 9:");
+
             Console.WriteLine(CreateNewString("C Sharp"));
             Console.WriteLine(CreateNewString("JS"));
             Console.WriteLine(CreateNewString("S"));
@@ -116,6 +118,8 @@
             Console.ReadKey();
 
             //Problem 10: Check if a given positive number is a multiple of 3 or a multiple of 7:
+
+            Console.WriteLine("Problem 10:");
 
             Console.WriteLine(CheckNumber(3));
             Console.WriteLine(CheckNumber(14));
@@ -127,6 +131,8 @@
 
             //Problem 11: Check if a given string starts with 'C#' or not:
 
+            Console.WriteLine("Problem 11:");
+
             Console.WriteLine(CheckIfStartWith("C# Sharp"));
             Console.WriteLine(CheckIfStartWith("C#"));
             Console.WriteLine(CheckIfStartWith("C"));
@@ -134,7 +140,23 @@
 
             Console.WriteLine("-----------------------------------------------------------------");
             Console.ReadKey();
+
+
+            //Problem 12: Check if one given temperatures is less than 0 and the other is greater than 100:
+
+            Console.WriteLine("Problem 12:");
+
+            Console.WriteLine(CheckRangeTemperature(102, -1));
+            Console.WriteLine(CheckRangeTemperature(-1, 120));
+            Console.WriteLine(CheckRangeTemperature(2, 120));
+            Console.WriteLine(CheckRangeTemperature(-2, 99));
+
+            Console.WriteLine("-----------------------------------------------------------------");
+            Console.ReadKey();
         }
+
+        private static bool CheckRangeTemperature(int t0, int t1)
+            => t0 is < 0 or > 100 && t1 is < 0 or > 100;
 
         private static bool CheckIfStartWith(string text)
             => text.StartsWith("C#");
