@@ -178,7 +178,26 @@
 
             Console.WriteLine("-----------------------------------------------------------------");
             Console.ReadKey();
+
+            //Problem 15: Check if a string 'yt' appears at index 1 in a given string.
+            //If it appears return a string without 'yt' otherwise return the original string:
+
+            Console.WriteLine("Problem 15:");
+
+            Console.WriteLine(CheckString("Python"));
+            Console.WriteLine(CheckString("ytade"));
+            Console.WriteLine(CheckString("jsues"));
+
+            Console.WriteLine("-----------------------------------------------------------------");
+            Console.ReadKey();
         }
+
+        private static string CheckString(string word)
+            => word
+                .Substring(1, 2)
+                .Equals("yt")
+                ? word.Remove(1, 2)
+                : word;
 
         private static bool CheckRangeOfTheNums(int numA, int numB, int numC)
             => numA is >= 20 and <= 50 ||
