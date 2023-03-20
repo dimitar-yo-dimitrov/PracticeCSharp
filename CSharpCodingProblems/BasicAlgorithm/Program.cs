@@ -165,19 +165,40 @@
 
             Console.WriteLine("-----------------------------------------------------------------");
             Console.ReadKey();
+
+            //Problem 14: Check whether three given integer values are in the range 20..50 inclusive.
+            //Return true if 1 or more of them are in the said range otherwise false:
+
+            Console.WriteLine("Problem 14:");
+
+            Console.WriteLine(CheckRangeOfTheNums(11, 20, 12));
+            Console.WriteLine(CheckRangeOfTheNums(30, 30, 17));
+            Console.WriteLine(CheckRangeOfTheNums(25, 35, 50));
+            Console.WriteLine(CheckRangeOfTheNums(15, 12, 8));
+
+            Console.WriteLine("-----------------------------------------------------------------");
+            Console.ReadKey();
         }
 
+        private static bool CheckRangeOfTheNums(int numA, int numB, int numC)
+            => numA is >= 20 and <= 50 ||
+               numB is >= 20 and <= 50 ||
+               numC is >= 20 and <= 50;
+
         private static bool CheckRange(int numA, int numB)
-            => numA is >= 100 and <= 200 || numB is >= 100 and <= 200;
+            => numA is >= 100 and <= 200 ||
+               numB is >= 100 and <= 200;
 
         private static bool CheckRangeTemperature(int t0, int t1)
-            => t0 is < 0 or > 100 && t1 is < 0 or > 100;
+            => t0 is < 0 or > 100 &&
+               t1 is < 0 or > 100;
 
         private static bool CheckIfStartWith(string text)
             => text.StartsWith("C#");
 
         private static bool CheckNumber(int n)
-            => (n / 3) * 3 == n || (n / 7) * 7 == n;
+            => (n / 3) * 3 == n ||
+               (n / 7) * 7 == n;
 
         private static string CreateNewString(string text)
             => string.Format("{0}{1}{0}", text[^1..], text);
@@ -216,18 +237,19 @@
         {
             var parts = input.Split(" ");
 
-            return parts[0] != "if" ? input.Insert(0, "if ") : input;
+            return parts[0] != "if"
+                ? input.Insert(0, "if ")
+                : input;
         }
 
         private static bool IntegerInRange(int n)
-        {
-            return Math.Abs(n - 100) <= 10 || Math.Abs(n - 200) <= 10;
-        }
+            => Math.Abs(n - 100) <= 10 ||
+               Math.Abs(n - 200) <= 10;
 
         private static bool CheckIntegers(int x, int y)
-        {
-            return x == 30 || y == 30 || (x + y == 30);
-        }
+            => x == 30 ||
+               y == 30 ||
+               x + y == 30;
 
         private static int TakeDifference(int n)
         {
@@ -242,8 +264,8 @@
         }
 
         private static int SumOfTheTwoValues(int x, int y)
-        {
-            return x == y ? (x + y) * 3 : x + y;
-        }
+            => x == y
+                ? (x + y) * 3
+                : x + y;
     }
 }
