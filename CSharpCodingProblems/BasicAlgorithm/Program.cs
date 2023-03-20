@@ -190,6 +190,25 @@
 
             Console.WriteLine("-----------------------------------------------------------------");
             Console.ReadKey();
+
+            //Problem 16: Check the largest number among three given integers.
+
+            Console.WriteLine("Problem 16:");
+
+            Console.WriteLine(CheckTheLargestNum(11, 20, 12));
+            Console.WriteLine(CheckTheLargestNum(30, 30, 17));
+            Console.WriteLine(CheckTheLargestNum(25, 35, 50));
+            Console.WriteLine(CheckTheLargestNum(15, 12, 8));
+
+            Console.WriteLine("-----------------------------------------------------------------");
+            Console.ReadKey();
+        }
+
+        private static int CheckTheLargestNum(int numA, int numB, int numC)
+        {
+            var result = new List<int> { numA, numB, numC };
+
+            return result.Max();
         }
 
         private static string CheckString(string word)
