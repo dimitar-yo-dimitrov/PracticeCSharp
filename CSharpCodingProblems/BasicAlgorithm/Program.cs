@@ -288,6 +288,34 @@
 
             Console.WriteLine("-----------------------------------------------------------------");
             Console.ReadKey();
+
+            //Problem 23: Convert the last 3 characters of a given string in upper case.
+            //If the length of the string has less than 3 then uppercase all the character:
+
+            Console.WriteLine("Problem 23:");
+
+            Console.WriteLine(ConvertLastThreeChars("CSharp"));
+            Console.WriteLine(ConvertLastThreeChars("Python"));
+            Console.WriteLine(ConvertLastThreeChars("Javascript"));
+            Console.WriteLine(ConvertLastThreeChars("js"));
+            Console.WriteLine(ConvertLastThreeChars("PHP"));
+
+            Console.WriteLine("-----------------------------------------------------------------");
+            Console.ReadKey();
+        }
+
+        private static string ConvertLastThreeChars(string text)
+        {
+            if (text.Length <= 3)
+            {
+                return text.ToUpper();
+            }
+
+            string letter = text[^3..];
+
+            var result = text.Replace(letter, letter.ToUpper());
+
+            return result;
         }
 
         private static bool CheckLastDigit(int numA, int numB)
