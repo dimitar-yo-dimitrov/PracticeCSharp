@@ -274,6 +274,25 @@
 
             Console.WriteLine("-----------------------------------------------------------------");
             Console.ReadKey();
+
+            //Problem 22: Check if two given non-negative integers have the same last digit:
+
+            Console.WriteLine("Problem 22:");
+
+            Console.WriteLine(CheckLastDigit(78, 958));
+            Console.WriteLine(CheckLastDigit(22, 30));
+            Console.WriteLine(CheckLastDigit(215, 25));
+            Console.WriteLine(CheckLastDigit(27, 27));
+            Console.WriteLine(CheckLastDigit(27, 33));
+            Console.WriteLine(CheckLastDigit(337, 27));
+
+            Console.WriteLine("-----------------------------------------------------------------");
+            Console.ReadKey();
+        }
+
+        private static bool CheckLastDigit(int numA, int numB)
+        {
+            return numA % 10 == numB % 10;
         }
 
         private static bool CheckForExistCharacter(string text)
