@@ -216,6 +216,38 @@
 
             Console.WriteLine("-----------------------------------------------------------------");
             Console.ReadKey();
+
+            //Problem 18: Check whether two given integers are in the range 40..50 inclusive,
+            //or they are both in the range 50..60 inclusive:
+
+            Console.WriteLine("Problem 18:");
+
+            Console.WriteLine(CheckRangeBtwTwoInteger(78, 95));
+            Console.WriteLine(CheckRangeBtwTwoInteger(22, 35));
+            Console.WriteLine(CheckRangeBtwTwoInteger(40, 50));
+            Console.WriteLine(CheckRangeBtwTwoInteger(55, 60));
+            Console.WriteLine(CheckRangeBtwTwoInteger(50, 60));
+            Console.WriteLine(CheckRangeBtwTwoInteger(60, 65));
+
+            Console.WriteLine("-----------------------------------------------------------------");
+            Console.ReadKey();
+        }
+
+        private static bool CheckRangeBtwTwoInteger(int numA, int numB)
+        {
+            if (numA is >= 40 and <= 50 ||
+                numB is >= 40 and <= 50)
+            {
+                return true;
+            }
+
+            if (numA is >= 50 and <= 60 &&
+                numB is >= 50 and <= 60)
+            {
+                return true;
+            }
+
+            return false;
         }
 
         private static int CheckNearestValue(int numA, int numB)
