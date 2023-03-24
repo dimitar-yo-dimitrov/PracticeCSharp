@@ -231,6 +231,42 @@
 
             Console.WriteLine("-----------------------------------------------------------------");
             Console.ReadKey();
+
+            //Problem 19: Find the larger value from two positive integer values that is in the range 20..30 inclusive,
+            //or return 0 if neither is in that range:
+
+            Console.WriteLine("Problem 19:");
+
+            Console.WriteLine(FindLargerNumInRange(78, 95));
+            Console.WriteLine(FindLargerNumInRange(22, 30));
+            Console.WriteLine(FindLargerNumInRange(21, 25));
+            Console.WriteLine(FindLargerNumInRange(27, 27));
+            Console.WriteLine(FindLargerNumInRange(27, 33));
+            Console.WriteLine(FindLargerNumInRange(33, 27));
+
+            Console.WriteLine("-----------------------------------------------------------------");
+            Console.ReadKey();
+        }
+
+        private static int FindLargerNumInRange(int numA, int numB)
+        {
+            if (numA is >= 20 and <= 30 &&
+                numB is >= 20 and <= 30)
+            {
+                return numA >= numB ? numA : numB;
+            }
+
+            if (numA is >= 20 and <= 30)
+            {
+                return numA;
+            }
+
+            if (numB is >= 20 and <= 30)
+            {
+                return numB;
+            }
+
+            return 0;
         }
 
         private static bool CheckRangeBtwTwoInteger(int numA, int numB)
