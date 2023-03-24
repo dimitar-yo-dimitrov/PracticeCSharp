@@ -202,6 +202,28 @@
 
             Console.WriteLine("-----------------------------------------------------------------");
             Console.ReadKey();
+
+            //Problem 17: Check which number nearest to the value 100 among two given integers.
+            //Return 0 if the two numbers are equal:
+
+            Console.WriteLine("Problem 17:");
+
+            Console.WriteLine(CheckNearestValue(78, 95));
+            Console.WriteLine(CheckNearestValue(95, 95));
+            Console.WriteLine(CheckNearestValue(99, 90));
+            Console.WriteLine(CheckNearestValue(199, 190));
+            Console.WriteLine(CheckNearestValue(190, 190));
+
+            Console.WriteLine("-----------------------------------------------------------------");
+            Console.ReadKey();
+        }
+
+        private static int CheckNearestValue(int numA, int numB)
+        {
+            var resultA = Math.Abs(numA - 100);
+            var resultB = Math.Abs(numB - 100);
+
+            return resultA < resultB ? numA : resultA > resultB ? numB : 0;
         }
 
         private static int CheckTheLargestNum(int numA, int numB, int numC)
