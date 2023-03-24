@@ -246,6 +246,55 @@
 
             Console.WriteLine("-----------------------------------------------------------------");
             Console.ReadKey();
+
+            //Problem 20: Check if a given string contains between indexes 2 and 4 'z' character:
+
+            Console.WriteLine("Problem 20:");
+
+            Console.WriteLine(CheckStringBtwTwoIndexes("frizz"));
+            Console.WriteLine(CheckStringBtwTwoIndexes("zane"));
+            Console.WriteLine(CheckStringBtwTwoIndexes("Zazz"));
+            Console.WriteLine(CheckStringBtwTwoIndexes("false"));
+            Console.WriteLine(CheckStringBtwTwoIndexes("zzzz"));
+            Console.WriteLine(CheckStringBtwTwoIndexes("ZZZZ"));
+
+            Console.WriteLine("-----------------------------------------------------------------");
+            Console.ReadKey();
+
+            //Problem 21: Check whether a given string contain the character 'z' from 2 to 4 times:
+
+            Console.WriteLine("Problem 21:");
+
+            Console.WriteLine(CheckForExistCharacter("frizz"));
+            Console.WriteLine(CheckForExistCharacter("zane"));
+            Console.WriteLine(CheckForExistCharacter("Zazz"));
+            Console.WriteLine(CheckForExistCharacter("false"));
+            Console.WriteLine(CheckForExistCharacter("zzzz"));
+            Console.WriteLine(CheckForExistCharacter("ZZZZ"));
+
+            Console.WriteLine("-----------------------------------------------------------------");
+            Console.ReadKey();
+        }
+
+        private static bool CheckForExistCharacter(string text)
+        {
+            var count = 0;
+
+            for (int i = 0; i < text.Length; i++)
+            {
+                if (text[i] == 'z')
+                {
+                    count++;
+                }
+
+            }
+
+            return count is >= 2 and <= 4;
+        }
+
+        private static bool CheckStringBtwTwoIndexes(string text)
+        {
+            return text.Substring(2, 2).Contains('z');
         }
 
         private static int FindLargerNumInRange(int numA, int numB)
