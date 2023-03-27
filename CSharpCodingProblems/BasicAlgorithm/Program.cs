@@ -328,6 +328,32 @@ namespace BasicAlgorithm
 
             Console.WriteLine("-----------------------------------------------------------------");
             Console.ReadKey();
+
+            //Problem 26: Count the number of times the string "aa" appears in a given string and assume that "aaa" contains two "aa":
+
+            Console.WriteLine("Problem 26:");
+
+            Console.WriteLine(CountAndSumTheString("bbaaccaag"));
+            Console.WriteLine(CountAndSumTheString("jjkiaaasew"));
+            Console.WriteLine(CountAndSumTheString("JSaaakoiaa"));
+
+            Console.WriteLine("-----------------------------------------------------------------");
+            Console.ReadKey();
+        }
+
+        private static int CountAndSumTheString(string text)
+        {
+            var count = 0;
+
+            for (int i = 0; i < text.Length - 1; i++)
+            {
+                if (text.Substring(i, 2) == "aa")
+                {
+                    count++;
+                }
+            }
+
+            return count;
         }
 
         private static void CutAndCopyTheString(string text, int n)
