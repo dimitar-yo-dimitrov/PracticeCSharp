@@ -315,6 +315,40 @@ namespace BasicAlgorithm
 
             Console.WriteLine("-----------------------------------------------------------------");
             Console.ReadKey();
+
+            //Problem 25: Create a new string which is n (non-negative integer) copies of the the first 3 characters of a given string.
+            //If the length of the given string is less than 3 then return n copies of the string:
+
+            Console.WriteLine("Problem 25:");
+
+            CutAndCopyTheString("CSharp", 2);
+            CutAndCopyTheString("Python", 3);
+            CutAndCopyTheString("JavaScript", 1);
+            CutAndCopyTheString("JS", 3);
+
+            Console.WriteLine("-----------------------------------------------------------------");
+            Console.ReadKey();
+        }
+
+        private static void CutAndCopyTheString(string text, int n)
+        {
+            StringBuilder sb = new StringBuilder();
+
+            var lengthOfText = 3;
+
+            if (text.Length < lengthOfText)
+            {
+                lengthOfText = text.Length;
+            }
+
+            var result = text[..lengthOfText];
+
+            for (int i = 0; i < n; i++)
+            {
+                sb.Append(result);
+            }
+
+            Console.WriteLine(sb.ToString().TrimEnd());
         }
 
         private static void CopyOfString(string text, int n)
