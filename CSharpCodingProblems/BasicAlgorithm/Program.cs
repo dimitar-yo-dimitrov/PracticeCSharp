@@ -333,15 +333,64 @@ namespace BasicAlgorithm
 
             Console.WriteLine("Problem 26:");
 
-            Console.WriteLine(CountAndSumTheString("bbaaccaag"));
-            Console.WriteLine(CountAndSumTheString("jjkiaaasew"));
-            Console.WriteLine(CountAndSumTheString("JSaaakoiaa"));
+            Console.WriteLine(CountTheString("bbaaccaag"));
+            Console.WriteLine(CountTheString("jjkiaaasew"));
+            Console.WriteLine(CountTheString("JSaaakoiaa"));
+
+            Console.WriteLine("-----------------------------------------------------------------");
+            Console.ReadKey();
+
+            //Problem 27: Check if the first appearance of "a" in a given string is immediately followed by another "a:
+
+            Console.WriteLine("Problem 27:");
+
+            Console.WriteLine(CheckTheString("bbaaccaag"));
+            Console.WriteLine(CheckTheString("jajkiaaasew"));
+            Console.WriteLine(CheckTheString("JSaaakoiaa"));
 
             Console.WriteLine("-----------------------------------------------------------------");
             Console.ReadKey();
         }
 
-        private static int CountAndSumTheString(string text)
+        private static bool CheckTheString(string text)
+        {
+            var count = 0;
+
+            for (int i = 0; i < text.Length - 1; i++)
+            {
+                if (text[i].Equals('a'))
+                {
+                    count++;
+                }
+
+                if (text.Substring(i, 2) == "aa" && count < 2)
+                {
+                    return true;
+                }
+            }
+
+            return false;
+
+            //bool flag = false;
+
+            //for (int i = 0; i < text.Length - 1; i++)
+            //{
+            //    if (text.Substring(i, 2) == "aa")
+            //    {
+            //        flag = true;
+            //        break;
+            //    }
+
+            //    if (text[i] == 'a')
+            //    {
+            //        break;
+            //    }
+            //}
+
+            //return flag;
+        }
+
+        private static int CountTheString(string text)
         {
             var count = 0;
 
