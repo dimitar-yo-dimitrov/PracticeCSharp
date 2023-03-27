@@ -350,6 +350,42 @@ namespace BasicAlgorithm
 
             Console.WriteLine("-----------------------------------------------------------------");
             Console.ReadKey();
+
+            //Problem 28: Create a new string made of every other character starting with the first from a given string:
+
+            Console.WriteLine("Problem 28:");
+
+            Console.WriteLine(MadeNewString("CSharp"));
+            Console.WriteLine(MadeNewString("Python"));
+            Console.WriteLine(MadeNewString("JS"));
+            Console.WriteLine(MadeNewString("PHP"));
+
+            Console.WriteLine("-----------------------------------------------------------------");
+            Console.ReadKey();
+        }
+
+        private static string MadeNewString(string text)
+        {
+            var result = string.Empty;
+
+            for (int i = 0; i < text.Length; i++)
+            {
+                if (i % 2 == 0)
+                {
+                    result += text[i];
+                }
+            }
+
+            return result;
+
+            //StringBuilder sb = new StringBuilder();
+
+            //for (int i = 0; i < text.Length; i += 2)
+            //{
+            //    sb.Append(text[i]);
+            //}
+
+            //return sb.ToString().TrimEnd();
         }
 
         private static bool CheckTheString(string text)
