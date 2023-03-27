@@ -1,4 +1,6 @@
-﻿namespace BasicAlgorithm
+﻿using System.Text;
+
+namespace BasicAlgorithm
 {
     internal class Program
     {
@@ -302,6 +304,29 @@
 
             Console.WriteLine("-----------------------------------------------------------------");
             Console.ReadKey();
+
+            //Problem 24: Create a new string which is n (non-negative integer) copies of a given string:
+
+            Console.WriteLine("Problem 24:");
+
+            CopyOfString("CSharp", 2);
+            CopyOfString("Python", 3);
+            CopyOfString("JavaScript", 1);
+
+            Console.WriteLine("-----------------------------------------------------------------");
+            Console.ReadKey();
+        }
+
+        private static void CopyOfString(string text, int n)
+        {
+            StringBuilder sb = new StringBuilder();
+
+            for (int i = 0; i < n; i++)
+            {
+                sb.Append(text);
+            }
+
+            Console.WriteLine(sb.ToString().TrimEnd());
         }
 
         private static string ConvertLastThreeChars(string text)
@@ -311,9 +336,9 @@
                 return text.ToUpper();
             }
 
-            string letter = text[^3..];
+            string lastThreeChars = text[^3..];
 
-            var result = text.Replace(letter, letter.ToUpper());
+            var result = text.Replace(lastThreeChars, lastThreeChars.ToUpper());
 
             return result;
         }
