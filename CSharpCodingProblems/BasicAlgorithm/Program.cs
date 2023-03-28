@@ -386,7 +386,21 @@ namespace BasicAlgorithm
 
             Console.WriteLine("-----------------------------------------------------------------");
             Console.ReadKey();
+
+            //Problem 31: Check a specified number is present in a given array of integers.
+
+            Console.WriteLine("Problem 31:");
+
+            Console.WriteLine(CheckArray(new[] { 1, 2, 9, 3 }, 3));
+            Console.WriteLine(CheckArray(new[] { 1, 2, 3, 4, 5, 6 }, 2));
+            Console.WriteLine(CheckArray(new[] { 1, 2, 2, 3 }, 9));
+
+            Console.WriteLine("-----------------------------------------------------------------");
+            Console.ReadKey();
         }
+
+        private static bool CheckArray(IEnumerable<int> numbers, int num)
+            => numbers.Contains(num);
 
         private static int CountString(string text)
         {
