@@ -340,7 +340,7 @@ namespace BasicAlgorithm
             Console.WriteLine("-----------------------------------------------------------------");
             Console.ReadKey();
 
-            //Problem 27: Check if the first appearance of "a" in a given string is immediately followed by another "a:
+            //Problem 27: Check if the first appearance of 'a' in a given string is immediately followed by another 'a':
 
             Console.WriteLine("Problem 27:");
 
@@ -362,6 +362,29 @@ namespace BasicAlgorithm
 
             Console.WriteLine("-----------------------------------------------------------------");
             Console.ReadKey();
+
+            //Problem 29: Create a string like "aababcabcd" from a given string "abcd":
+
+            Console.WriteLine("Problem 29:");
+
+            Console.WriteLine(CreatingNewString("abcd"));
+            Console.WriteLine(CreatingNewString("abc"));
+            Console.WriteLine(CreatingNewString("a"));
+
+            Console.WriteLine("-----------------------------------------------------------------");
+            Console.ReadKey();
+        }
+
+        private static string CreatingNewString(string text)
+        {
+            var result = string.Empty;
+
+            for (int i = 0; i < text.Length; i++)
+            {
+                result += text[..(i + 1)];
+            }
+
+            return result;
         }
 
         private static string MadeNewString(string text)
