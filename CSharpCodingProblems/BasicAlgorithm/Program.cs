@@ -373,6 +373,36 @@ namespace BasicAlgorithm
 
             Console.WriteLine("-----------------------------------------------------------------");
             Console.ReadKey();
+
+            //Problem 30: Count a substring of length 2 appears in a given string and also as the last 2 characters of the string.
+            //Do not count the end substring:
+
+            Console.WriteLine("Problem 30:");
+
+            Console.WriteLine(CountString("abcdsab"));
+            Console.WriteLine(CountString("abcdabab"));
+            Console.WriteLine(CountString("abcabdabab"));
+            Console.WriteLine(CountString("abcabd"));
+
+            Console.WriteLine("-----------------------------------------------------------------");
+            Console.ReadKey();
+        }
+
+        private static int CountString(string text)
+        {
+            var count = 0;
+
+            var lastTwoChar = text[^2..];
+
+            for (int i = 0; i < text.Length - 2; i++)
+            {
+                if (text.Substring(i, 2).Equals(lastTwoChar))
+                {
+                    count++;
+                }
+            }
+
+            return count;
         }
 
         private static string CreatingNewString(string text)
