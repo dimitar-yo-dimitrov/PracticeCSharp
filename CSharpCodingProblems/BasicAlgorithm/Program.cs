@@ -420,17 +420,52 @@ namespace BasicAlgorithm
 
             Console.WriteLine("-----------------------------------------------------------------");
             Console.ReadKey();
+
+            //Problem 34: Compare two given strings and return the number of the positions where they contain the same length 2 substring:
+
+            Console.WriteLine("Problem 34:");
+
+            Console.WriteLine(CountOfEqualSubstring("abcdefgh", "abijsklm"));
+            Console.WriteLine(CountOfEqualSubstring("abcde", "osuefrcd"));
+            Console.WriteLine(CountOfEqualSubstring("pqrstuvwx", "pqkdiewx"));
+
+            Console.WriteLine("-----------------------------------------------------------------");
+            Console.ReadKey();
         }
 
-        private static bool CheckForSequenceOfNumInArray(int[] numbers)
+        private static int CountOfEqualSubstring(string textA, string textB)
         {
-            var numA = 1;
-            var numB = 2;
-            var numC = 3;
+            var count = 0;
 
-            for (int i = 0; i < numbers.Length - 1; i++)
+            for (int i = 0; i < textA.Length - 1; i++)
             {
-                if (numbers[i] == numA && numbers[i + 1] == numB && numbers[i + 2] == numC)
+                var substrA = textA.Substring(i, 2);
+
+                for (int j = 0; j < textB.Length - 1; j++)
+                {
+                    var substrB = textB.Substring(j, 2);
+
+                    if (substrA == substrB)
+                    {
+                        count++;
+                    }
+                }
+            }
+
+            return count;
+        }
+
+        private static bool CheckForSequenceOfNumInArray(IReadOnlyList<int> numbers)
+        {
+            const int numA = 1;
+            const int numB = 2;
+            const int numC = 3;
+
+            for (int i = 0; i < numbers.Count - 1; i++)
+            {
+                if (numbers[i] == numA &&
+                    numbers[i + 1] == numB &&
+                    numbers[i + 2] == numC)
                 {
                     return true;
                 }
