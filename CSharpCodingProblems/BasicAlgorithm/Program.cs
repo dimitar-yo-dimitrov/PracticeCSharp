@@ -391,15 +391,29 @@ namespace BasicAlgorithm
 
             Console.WriteLine("Problem 31:");
 
-            Console.WriteLine(CheckArray(new[] { 1, 2, 9, 3 }, 3));
-            Console.WriteLine(CheckArray(new[] { 1, 2, 3, 4, 5, 6 }, 2));
-            Console.WriteLine(CheckArray(new[] { 1, 2, 2, 3 }, 9));
+            Console.WriteLine(CheckForExistingElementInArray(new[] { 1, 2, 9, 3 }, 3));
+            Console.WriteLine(CheckForExistingElementInArray(new[] { 1, 2, 2, 3 }, 2));
+            Console.WriteLine(CheckForExistingElementInArray(new[] { 1, 2, 2, 3 }, 9));
+
+            Console.WriteLine("-----------------------------------------------------------------");
+            Console.ReadKey();
+
+            //Problem 32: Check if one of the first 4 elements in an array of integers is equal to a given element.
+
+            Console.WriteLine("Problem 32:");
+
+            Console.WriteLine(CheckForEqualElementInArray(new[] { 1, 2, 9, 3 }, 3));
+            Console.WriteLine(CheckForEqualElementInArray(new[] { 1, 2, 3, 4, 5, 6 }, 2));
+            Console.WriteLine(CheckForEqualElementInArray(new[] { 1, 2, 2, 3 }, 9));
 
             Console.WriteLine("-----------------------------------------------------------------");
             Console.ReadKey();
         }
 
-        private static bool CheckArray(IEnumerable<int> numbers, int num)
+        private static bool CheckForEqualElementInArray(IEnumerable<int> numbers, int num)
+            => numbers.Take(4).Contains(num);
+
+        private static bool CheckForExistingElementInArray(IEnumerable<int> numbers, int num)
             => numbers.Contains(num);
 
         private static int CountString(string text)
