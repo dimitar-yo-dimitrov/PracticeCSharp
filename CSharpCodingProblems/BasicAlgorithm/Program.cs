@@ -6,8 +6,8 @@ namespace BasicAlgorithm
     {
         static void Main(string[] args)
         {
-            //Problem 1: Compute the sum of the two given integer values.
-            //If the two values are the same, then return triple their sum:
+            /*Problem 1: Compute the sum of the two given integer values.
+            If the two values are the same, then return triple their sum:*/
 
             Console.WriteLine("Problem 1:");
 
@@ -18,8 +18,8 @@ namespace BasicAlgorithm
             Console.WriteLine("-----------------------------------------------------------------");
             Console.ReadKey();
 
-            //Problem 2: Get the absolute difference between n and 51.
-            //If n is greater than 51 return triple the absolute difference:
+            /*Problem 2: Get the absolute difference between n and 51.
+            If n is greater than 51 return triple the absolute difference:*/
 
             Console.WriteLine("Problem 2:");
             Console.WriteLine(TakeDifference(47));
@@ -50,8 +50,8 @@ namespace BasicAlgorithm
             Console.WriteLine("-----------------------------------------------------------------");
             Console.ReadKey();
 
-            //Problem 5: Create a new string where 'if' is added to the front of a given string.
-            //If the string already begins with 'if', return the string unchanged:
+            /*Problem 5: Create a new string where 'if' is added to the front of a given string.
+            If the string already begins with 'if', return the string unchanged:*/
 
             Console.WriteLine("Problem 5:");
 
@@ -62,8 +62,8 @@ namespace BasicAlgorithm
             Console.WriteLine("-----------------------------------------------------------------");
             Console.ReadKey();
 
-            //Problem 6: Remove the character in a given position of a given string.
-            //The given position will be in the range 0.. string length -1 inclusive:
+            /*Problem 6: Remove the character in a given position of a given string.
+            The given position will be in the range 0..string length - 1 inclusive:*/
 
             Console.WriteLine("Problem 6:");
 
@@ -85,8 +85,8 @@ namespace BasicAlgorithm
             Console.WriteLine("-----------------------------------------------------------------");
             Console.ReadKey();
 
-            //Problem 8: Create a new string which is 4 copies of the 2 front characters of a given string.
-            //If the given string length is less than 2 return the original string:
+            /*Problem 8: Create a new string which is 4 copies of the 2 front characters of a given string.
+            If the given string length is less than 2 return the original string:*/
 
             Console.WriteLine("Problem 8:");
 
@@ -168,8 +168,8 @@ namespace BasicAlgorithm
             Console.WriteLine("-----------------------------------------------------------------");
             Console.ReadKey();
 
-            //Problem 14: Check whether three given integer values are in the range 20..50 inclusive.
-            //Return true if 1 or more of them are in the said range otherwise false:
+            /*Problem 14: Check whether three given integer values are in the range 20..50 inclusive.
+            Return true if 1 or more of them are in the said range otherwise false:*/
 
             Console.WriteLine("Problem 14:");
 
@@ -181,8 +181,8 @@ namespace BasicAlgorithm
             Console.WriteLine("-----------------------------------------------------------------");
             Console.ReadKey();
 
-            //Problem 15: Check if a string 'yt' appears at index 1 in a given string.
-            //If it appears return a string without 'yt' otherwise return the original string:
+            /*Problem 15: Check if a string 'yt' appears at index 1 in a given string.
+            If it appears return a string without 'yt' otherwise return the original string:*/
 
             Console.WriteLine("Problem 15:");
 
@@ -205,8 +205,8 @@ namespace BasicAlgorithm
             Console.WriteLine("-----------------------------------------------------------------");
             Console.ReadKey();
 
-            //Problem 17: Check which number nearest to the value 100 among two given integers.
-            //Return 0 if the two numbers are equal:
+            /*Problem 17: Check which number nearest to the value 100 among two given integers.
+            Return 0 if the two numbers are equal:*/
 
             Console.WriteLine("Problem 17:");
 
@@ -219,8 +219,8 @@ namespace BasicAlgorithm
             Console.WriteLine("-----------------------------------------------------------------");
             Console.ReadKey();
 
-            //Problem 18: Check whether two given integers are in the range 40..50 inclusive,
-            //or they are both in the range 50..60 inclusive:
+            /*Problem 18: Check whether two given integers are in the range 40..50 inclusive,
+            or they are both in the range 50..60 inclusive:*/
 
             Console.WriteLine("Problem 18:");
 
@@ -234,8 +234,8 @@ namespace BasicAlgorithm
             Console.WriteLine("-----------------------------------------------------------------");
             Console.ReadKey();
 
-            //Problem 19: Find the larger value from two positive integer values that is in the range 20..30 inclusive,
-            //or return 0 if neither is in that range:
+            /*Problem 19: Find the larger value from two positive integer values that is in the range 20..30 inclusive,
+            or return 0 if neither is in that range:*/
 
             Console.WriteLine("Problem 19:");
 
@@ -291,8 +291,8 @@ namespace BasicAlgorithm
             Console.WriteLine("-----------------------------------------------------------------");
             Console.ReadKey();
 
-            //Problem 23: Convert the last 3 characters of a given string in upper case.
-            //If the length of the string has less than 3 then uppercase all the character:
+            /*Problem 23: Convert the last 3 characters of a given string in upper case.
+            If the length of the string has less than 3 then uppercase all the character:*/
 
             Console.WriteLine("Problem 23:");
 
@@ -316,8 +316,8 @@ namespace BasicAlgorithm
             Console.WriteLine("-----------------------------------------------------------------");
             Console.ReadKey();
 
-            //Problem 25: Create a new string which is n (non-negative integer) copies of the the first 3 characters of a given string.
-            //If the length of the given string is less than 3 then return n copies of the string:
+            /*Problem 25: Create a new string which is n(non - negative integer) copies of the the first 3 characters of a given string.
+            If the length of the given string is less than 3 then return n copies of the string:*/
 
             Console.WriteLine("Problem 25:");
 
@@ -374,8 +374,8 @@ namespace BasicAlgorithm
             Console.WriteLine("-----------------------------------------------------------------");
             Console.ReadKey();
 
-            //Problem 30: Count a substring of length 2 appears in a given string and also as the last 2 characters of the string.
-            //Do not count the end substring:
+            /*Problem 30: Count a substring of length 2 appears in a given string and also as the last 2 characters of the string.
+            Do not count the end substring:*/
 
             Console.WriteLine("Problem 30:");
 
@@ -431,6 +431,39 @@ namespace BasicAlgorithm
 
             Console.WriteLine("-----------------------------------------------------------------");
             Console.ReadKey();
+
+            /*Problem 35: Create a new string from a give string where a specified character have been removed except starting
+            and ending position of the given string:*/
+
+            Console.WriteLine("Problem 35:");
+
+            Console.WriteLine(RemoveCharOfString("xxHxix", "x"));
+            Console.WriteLine(RemoveCharOfString("abxdddca", "a"));
+            Console.WriteLine(RemoveCharOfString("xabjbhtrb", "b"));
+
+            Console.WriteLine("-----------------------------------------------------------------");
+            Console.ReadKey();
+        }
+
+        private static string RemoveCharOfString(string text, string character)
+        {
+            StringBuilder sb = new StringBuilder();
+
+            sb.Append(text[0]);
+
+            for (int i = 1; i < text.Length - 1; i++)
+            {
+                if (text[i].ToString() == character)
+                {
+                    continue;
+                }
+
+                sb.Append(text[i]);
+            }
+
+            sb.Append(text[^1]);
+
+            return sb.ToString().TrimEnd();
         }
 
         private static int CountOfEqualSubstring(string textA, string textB)
