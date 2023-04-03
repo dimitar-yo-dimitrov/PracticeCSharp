@@ -405,9 +405,38 @@ namespace BasicAlgorithm
             Console.WriteLine(CheckForEqualElementInArray(new[] { 1, 2, 9, 3 }, 3));
             Console.WriteLine(CheckForEqualElementInArray(new[] { 1, 2, 3, 4, 5, 6 }, 2));
             Console.WriteLine(CheckForEqualElementInArray(new[] { 1, 2, 2, 3 }, 9));
+            Console.WriteLine(CheckForEqualElementInArray(new[] { 1, 2, 2 }, 1));
 
             Console.WriteLine("-----------------------------------------------------------------");
             Console.ReadKey();
+
+            //Problem 33: Check whether the sequence of numbers 1, 2, 3 appears in a given array of integers somewhere.
+
+            Console.WriteLine("Problem 33:");
+
+            Console.WriteLine(CheckForSequenceOfNumInArray(new[] { 1, 1, 2, 3, 1 }));
+            Console.WriteLine(CheckForSequenceOfNumInArray(new[] { 1, 1, 2, 4, 1 }));
+            Console.WriteLine(CheckForSequenceOfNumInArray(new[] { 1, 1, 2, 1, 2, 3 }));
+
+            Console.WriteLine("-----------------------------------------------------------------");
+            Console.ReadKey();
+        }
+
+        private static bool CheckForSequenceOfNumInArray(int[] numbers)
+        {
+            var numA = 1;
+            var numB = 2;
+            var numC = 3;
+
+            for (int i = 0; i < numbers.Length - 1; i++)
+            {
+                if (numbers[i] == numA && numbers[i + 1] == numB && numbers[i + 2] == numC)
+                {
+                    return true;
+                }
+            }
+
+            return false;
         }
 
         private static bool CheckForEqualElementInArray(IEnumerable<int> numbers, int num)
