@@ -454,6 +454,34 @@ namespace BasicAlgorithm
 
             Console.WriteLine("-----------------------------------------------------------------");
             Console.ReadKey();
+
+            //Problem 37: Create a new string of the characters at indexes 0,1,  4,5,  8,9 ... from a given string:
+
+            Console.WriteLine("Problem 37:");
+
+            Console.WriteLine(CreateStringWithTheGivenSequencesOfIndexes("Python"));
+            Console.WriteLine(CreateStringWithTheGivenSequencesOfIndexes("JavaScript"));
+            Console.WriteLine(CreateStringWithTheGivenSequencesOfIndexes("HTML"));
+
+            Console.WriteLine("-----------------------------------------------------------------");
+            Console.ReadKey();
+        }
+
+        private static string CreateStringWithTheGivenSequencesOfIndexes(string text)
+        {
+            StringBuilder sb = new StringBuilder();
+
+            for (int i = 0; i < text.Length; i += 4)
+            {
+                var c = i + 2;
+                var n = 0;
+
+                n += c > text.Length ? 1 : 2;
+
+                sb.Append(text.Substring(i, n));
+            }
+
+            return sb.ToString().TrimEnd();
         }
 
         private static string CreateStringWithTheGivenIndexes(string text)
