@@ -443,6 +443,41 @@ namespace BasicAlgorithm
 
             Console.WriteLine("-----------------------------------------------------------------");
             Console.ReadKey();
+
+            //Problem 36: Create a new string with the given indexes 0, 1, 4, 5, 8, 9:
+
+            Console.WriteLine("Problem 36:");
+
+            Console.WriteLine(CreateStringWithTheGivenIndexes("Python"));
+            Console.WriteLine(CreateStringWithTheGivenIndexes("JavaScript"));
+            Console.WriteLine(CreateStringWithTheGivenIndexes("HTML"));
+
+            Console.WriteLine("-----------------------------------------------------------------");
+            Console.ReadKey();
+        }
+
+        private static string CreateStringWithTheGivenIndexes(string text)
+        {
+            StringBuilder sb = new StringBuilder();
+
+            for (var i = 0; i < text.Length; i++)
+            {
+                var letter = text[i];
+
+                switch (i)
+                {
+                    case 0:
+                    case 1:
+                    case 4:
+                    case 5:
+                    case 8:
+                    case 9:
+                        sb.Append(letter);
+                        break;
+                }
+            }
+
+            return sb.ToString().TrimEnd();
         }
 
         private static string RemoveCharOfString(string text, string character)
