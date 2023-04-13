@@ -490,26 +490,41 @@ namespace BasicAlgorithm
 
             Console.WriteLine("-----------------------------------------------------------------");
             Console.ReadKey();
+
+            //Problem 40: Compute the sum of the two given integers. If the sum is in the range 10..20 inclusive return 30:
+
+            Console.WriteLine("Problem 40:");
+
+            Console.WriteLine(SumOfTwoNumbers(new[] { 12, 17 }));
+            Console.WriteLine(SumOfTwoNumbers(new[] { 2, 17 }));
+            Console.WriteLine(SumOfTwoNumbers(new[] { 22, 17 }));
+            Console.WriteLine(SumOfTwoNumbers(new[] { 20, 0 }));
+
+            Console.WriteLine("-----------------------------------------------------------------");
+            Console.ReadKey();
+        }
+
+        private static int SumOfTwoNumbers(int[] numbers)
+        {
+            if (numbers.Sum() >= 10 && numbers.Sum() <= 20)
+            {
+                return 30;
+            }
+
+            return numbers.Sum();
         }
 
         private static bool CheckForSequenceOfThreeElements(IReadOnlyList<int> numbers)
         {
-            var flag = false;
-
             for (int i = 0; i < numbers.Count - 2; i++)
             {
                 if (numbers[i] == numbers[i + 1] && numbers[i + 1] == numbers[i + 2])
                 {
-                    flag = true;
-
-                    if (flag == true)
-                    {
-                        return flag;
-                    }
+                    return true;
                 }
             }
 
-            return flag;
+            return false;
         }
 
         private static int CountTheNumberOfTwoFives(IReadOnlyList<int> numbers)
