@@ -465,6 +465,33 @@ namespace BasicAlgorithm
 
             Console.WriteLine("-----------------------------------------------------------------");
             Console.ReadKey();
+
+            /*Problem 38: Count the number of two 5's are next to each other in an array of integers.
+            Also count the situation where the second 5 is actually a 6.*/
+
+            Console.WriteLine("Problem 38:");
+
+            Console.WriteLine(CountTheNumberOfTwoFives(new[] { 5, 5, 2 }));
+            Console.WriteLine(CountTheNumberOfTwoFives(new[] { 5, 5, 2, 5, 5 }));
+            Console.WriteLine(CountTheNumberOfTwoFives(new[] { 5, 6, 2, 9 }));
+
+            Console.WriteLine("-----------------------------------------------------------------");
+            Console.ReadKey();
+        }
+
+        private static int CountTheNumberOfTwoFives(IReadOnlyList<int> numbers)
+        {
+            var count = 0;
+
+            for (int i = 0; i < numbers.Count - 1; i++)
+            {
+                if (numbers[i] == 5 && (numbers[i + 1] == 5 || numbers[i + 1] == 6))
+                {
+                    count++;
+                }
+            }
+
+            return count;
         }
 
         private static string CreateStringWithTheGivenSequencesOfIndexes(string text)
