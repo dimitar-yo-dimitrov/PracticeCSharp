@@ -467,7 +467,7 @@ namespace BasicAlgorithm
             Console.ReadKey();
 
             /*Problem 38: Count the number of two 5's are next to each other in an array of integers.
-            Also count the situation where the second 5 is actually a 6.*/
+            Also count the situation where the second 5 is actually a 6:*/
 
             Console.WriteLine("Problem 38:");
 
@@ -477,6 +477,39 @@ namespace BasicAlgorithm
 
             Console.WriteLine("-----------------------------------------------------------------");
             Console.ReadKey();
+
+            /*Problem 39: Check if a triple is presents in an array of integers or not.
+             If a value appears three times in a row in an array it is called a triple:*/
+
+            Console.WriteLine("Problem 39:");
+
+            Console.WriteLine(CheckForSequenceOfThreeElements(new[] { 1, 1, 2, 2, 1 }));
+            Console.WriteLine(CheckForSequenceOfThreeElements(new[] { 1, 1, 2, 2, 2 }));
+            Console.WriteLine(CheckForSequenceOfThreeElements(new[] { 1, 1, 2, 1, 2, 3 }));
+            Console.WriteLine(CheckForSequenceOfThreeElements(new[] { 1, 1, 1, 2, 2, 2, 1 }));
+
+            Console.WriteLine("-----------------------------------------------------------------");
+            Console.ReadKey();
+        }
+
+        private static bool CheckForSequenceOfThreeElements(IReadOnlyList<int> numbers)
+        {
+            var flag = false;
+
+            for (int i = 0; i < numbers.Count - 2; i++)
+            {
+                if (numbers[i] == numbers[i + 1] && numbers[i + 1] == numbers[i + 2])
+                {
+                    flag = true;
+
+                    if (flag == true)
+                    {
+                        return flag;
+                    }
+                }
+            }
+
+            return flag;
         }
 
         private static int CountTheNumberOfTwoFives(IReadOnlyList<int> numbers)
