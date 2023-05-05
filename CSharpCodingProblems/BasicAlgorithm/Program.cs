@@ -502,6 +502,26 @@ namespace BasicAlgorithm
 
             Console.WriteLine("-----------------------------------------------------------------");
             Console.ReadKey();
+
+            //Problem 41: Accept two integers and return true if either one is 5 or their sum or difference is 5:
+
+            Console.WriteLine("Problem 41:");
+
+            Console.WriteLine(FindTheNumber5(5, 4));
+            Console.WriteLine(FindTheNumber5(1, 4));
+            Console.WriteLine(FindTheNumber5(4, 3));
+            Console.WriteLine(FindTheNumber5(9, 14));
+
+            Console.WriteLine("-----------------------------------------------------------------");
+            Console.ReadKey();
+        }
+
+        private static bool FindTheNumber5(int numA, int numB)
+        {
+            var resultA = Math.Abs(numA - numB);
+            var resultB = numA + numB;
+
+            return numA == 5 || numB == 5 || resultA == 5 || resultB == 5;
         }
 
         private static int SumOfTwoNumbers(int[] numbers)
