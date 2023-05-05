@@ -514,6 +514,23 @@ namespace BasicAlgorithm
 
             Console.WriteLine("-----------------------------------------------------------------");
             Console.ReadKey();
+
+            //Problem 42: Test if a given non-negative number is a multiple of 13 or it is one more than a multiple of 13:
+
+            Console.WriteLine("Problem 42:");
+
+            Console.WriteLine(CheckForMultipleNumber(13));
+            Console.WriteLine(CheckForMultipleNumber(14));
+            Console.WriteLine(CheckForMultipleNumber(27));
+            Console.WriteLine(CheckForMultipleNumber(41));
+
+            Console.WriteLine("-----------------------------------------------------------------");
+            Console.ReadKey();
+        }
+
+        private static bool CheckForMultipleNumber(int number)
+        {
+            return number % 13 == 0 || number % 13 == 1;
         }
 
         private static bool FindTheNumber5(int numA, int numB)
