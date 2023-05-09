@@ -527,7 +527,7 @@ namespace BasicAlgorithm
             Console.WriteLine("-----------------------------------------------------------------");
             Console.ReadKey();
 
-            //Problem 43: Check if a given non-negative given number is a multiple of 3 or 7, but not both:
+            //Problem 43: Check if a non-negative given number is a multiple of 3 or 7, but not both:
 
             Console.WriteLine("Problem 43:");
 
@@ -538,20 +538,26 @@ namespace BasicAlgorithm
 
             Console.WriteLine("-----------------------------------------------------------------");
             Console.ReadKey();
+
+            //Problem 44: Check if a given number is within 2 of a multiple of 10:
+
+            Console.WriteLine("Problem 44:");
+
+            Console.WriteLine(MultipleNumberOf_10_Within_2(3));
+            Console.WriteLine(MultipleNumberOf_10_Within_2(7));
+            Console.WriteLine(MultipleNumberOf_10_Within_2(8));
+            Console.WriteLine(MultipleNumberOf_10_Within_2(21));
+            Console.WriteLine(MultipleNumberOf_10_Within_2(22));
+
+            Console.WriteLine("-----------------------------------------------------------------");
+            Console.ReadKey();
         }
+
+        private static bool MultipleNumberOf_10_Within_2(int number)
+            => number % 10 <= 2 || number % 10 >= 8;
 
         private static bool MultipleNumberOf_3_Or_7(int number)
-        {
-
-            bool result = number % 3 == 0 || number % 7 == 0;
-
-            if (number % 3 == 0 && number % 7 == 0)
-            {
-                result = false;
-            }
-
-            return result;
-        }
+            => number % 3 == 0 ^ number % 7 == 0;
 
         private static bool CheckForMultipleNumber(int number)
             => number % 13 == 0 || number % 13 == 1;
