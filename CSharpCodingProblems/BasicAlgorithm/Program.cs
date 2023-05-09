@@ -579,7 +579,21 @@ namespace BasicAlgorithm
 
             Console.WriteLine("-----------------------------------------------------------------");
             Console.ReadKey();
+
+            //Problem 47: Check if it is possible to add two integers to get the third integer from three given integers:
+
+            Console.WriteLine("Problem 47:");
+
+            Console.WriteLine(SumOfTwoIntegersAndComparedWithThird(1, 2, 3));
+            Console.WriteLine(SumOfTwoIntegersAndComparedWithThird(4, 5, 6));
+            Console.WriteLine(SumOfTwoIntegersAndComparedWithThird(-1, 1, 0));
+
+            Console.WriteLine("-----------------------------------------------------------------");
+            Console.ReadKey();
         }
+
+        private static bool SumOfTwoIntegersAndComparedWithThird(int x, int y, int z)
+            => x == y + z || y == x + z || z == y + x;
 
         private static string CheckWhetherStringStartWith_F_OrEndsWith_B(string text)
         {
