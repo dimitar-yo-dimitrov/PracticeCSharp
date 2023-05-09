@@ -526,12 +526,35 @@ namespace BasicAlgorithm
 
             Console.WriteLine("-----------------------------------------------------------------");
             Console.ReadKey();
+
+            //Problem 43: Check if a given non-negative given number is a multiple of 3 or 7, but not both:
+
+            Console.WriteLine("Problem 43:");
+
+            Console.WriteLine(MultipleNumberOf_3_Or_7(3));
+            Console.WriteLine(MultipleNumberOf_3_Or_7(7));
+            Console.WriteLine(MultipleNumberOf_3_Or_7(21));
+            Console.WriteLine(MultipleNumberOf_3_Or_7(22));
+
+            Console.WriteLine("-----------------------------------------------------------------");
+            Console.ReadKey();
+        }
+
+        private static bool MultipleNumberOf_3_Or_7(int number)
+        {
+
+            bool result = number % 3 == 0 || number % 7 == 0;
+
+            if (number % 3 == 0 && number % 7 == 0)
+            {
+                result = false;
+            }
+
+            return result;
         }
 
         private static bool CheckForMultipleNumber(int number)
-        {
-            return number % 13 == 0 || number % 13 == 1;
-        }
+            => number % 13 == 0 || number % 13 == 1;
 
         private static bool FindTheNumber5(int numA, int numB)
         {
