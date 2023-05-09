@@ -564,6 +564,42 @@ namespace BasicAlgorithm
 
             Console.WriteLine("-----------------------------------------------------------------");
             Console.ReadKey();
+
+            /*Problem 46: Check whether a given string begins with "F" or ends with "B" case sensitive.
+            If the string starts with "F" return "Fizz" and return "Buzz" if it ends with "B" If the string starts with "F" and ends with "B" return "FizzBuzz".
+            In other cases return the original string:*/
+
+            Console.WriteLine("Problem 46:");
+
+            Console.WriteLine(CheckWhetherStringStartWith_F_OrEndsWith_B("FizzBuzz"));
+            Console.WriteLine(CheckWhetherStringStartWith_F_OrEndsWith_B("Fizz"));
+            Console.WriteLine(CheckWhetherStringStartWith_F_OrEndsWith_B("Buzz"));
+            Console.WriteLine(CheckWhetherStringStartWith_F_OrEndsWith_B("CSharp"));
+            Console.WriteLine(CheckWhetherStringStartWith_F_OrEndsWith_B("Fb"));
+
+            Console.WriteLine("-----------------------------------------------------------------");
+            Console.ReadKey();
+        }
+
+        private static string CheckWhetherStringStartWith_F_OrEndsWith_B(string text)
+        {
+            if (text.ToUpper().StartsWith('F') &&
+                text.ToUpper().EndsWith('B'))
+            {
+                return "FizzBuzz";
+            }
+
+            if (text.ToUpper().StartsWith('F'))
+            {
+                return "Fizz";
+            }
+
+            if (text.ToUpper().EndsWith('B'))
+            {
+                return "Buzz";
+            }
+
+            return text;
         }
 
         private static int SumOfTwoIntegers(int x, int y)
