@@ -551,6 +551,32 @@ namespace BasicAlgorithm
 
             Console.WriteLine("-----------------------------------------------------------------");
             Console.ReadKey();
+
+            /*Problem 45: Compute the sum of the two given integers.
+            If one of the given integer value is in the range 10..20 inclusive return 18:*/
+
+            Console.WriteLine("Problem 45:");
+
+            Console.WriteLine(SumOfTwoIntegers(3, 7));
+            Console.WriteLine(SumOfTwoIntegers(10, 11));
+            Console.WriteLine(SumOfTwoIntegers(10, 20));
+            Console.WriteLine(SumOfTwoIntegers(21, 220));
+
+            Console.WriteLine("-----------------------------------------------------------------");
+            Console.ReadKey();
+        }
+
+        private static int SumOfTwoIntegers(int x, int y)
+        {
+            if (x is >= 10 and <= 20 ||
+                y is >= 10 and <= 20)
+            {
+                return 18;
+            }
+
+            return x + y;
+
+            //return x is >= 10 and <= 20 || y is >= 10 and <= 20 ? 18 : x + y;
         }
 
         private static bool MultipleNumberOf_10_Within_2(int number)
