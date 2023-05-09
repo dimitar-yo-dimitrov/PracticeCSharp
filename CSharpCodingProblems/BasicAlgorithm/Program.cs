@@ -590,7 +590,21 @@ namespace BasicAlgorithm
 
             Console.WriteLine("-----------------------------------------------------------------");
             Console.ReadKey();
+
+            //Problem 48: Check if y is greater than x, and z is greater than y from three given integers x,y,z:
+
+            Console.WriteLine("Problem 48:");
+
+            Console.WriteLine(CheckForGreaterNext(1, 2, 3));
+            Console.WriteLine(CheckForGreaterNext(4, 5, 6));
+            Console.WriteLine(CheckForGreaterNext(-1, 1, 0));
+
+            Console.WriteLine("-----------------------------------------------------------------");
+            Console.ReadKey();
         }
+
+        private static bool CheckForGreaterNext(int x, int y, int z)
+            => x < y && y < z;
 
         private static bool SumOfTwoIntegersAndComparedWithThird(int x, int y, int z)
             => x == y + z || y == x + z || z == y + x;
