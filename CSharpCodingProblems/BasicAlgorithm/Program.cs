@@ -601,7 +601,22 @@ namespace BasicAlgorithm
 
             Console.WriteLine("-----------------------------------------------------------------");
             Console.ReadKey();
+
+            //Problem 49: Check if three given numbers are in strict increasing order:
+
+            Console.WriteLine("Problem 49:");
+
+            Console.WriteLine(CheckTheIncreasingOrder(1, 2, 3, false));
+            Console.WriteLine(CheckTheIncreasingOrder(4, 5, 6, true));
+            Console.WriteLine(CheckTheIncreasingOrder(1, 1, 0, true));
+            Console.WriteLine(CheckTheIncreasingOrder(10, 10, 30, true));
+
+            Console.WriteLine("-----------------------------------------------------------------");
+            Console.ReadKey();
         }
+
+        private static bool CheckTheIncreasingOrder(int x, int y, int z, bool flag)
+            => flag ? x <= y && y <= z : x < y && y < z;
 
         private static bool CheckForGreaterNext(int x, int y, int z)
             => x < y && y < z;
