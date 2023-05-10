@@ -613,6 +613,26 @@ namespace BasicAlgorithm
 
             Console.WriteLine("-----------------------------------------------------------------");
             Console.ReadKey();
+
+            //Problem 50: Check if two or more integers that are not negative have the same rightmost digit:
+
+            Console.WriteLine("Problem 50:");
+
+            Console.WriteLine(CheckForTheSameRightDigit(11, 21, 31));
+            Console.WriteLine(CheckForTheSameRightDigit(41, 55, 61));
+            Console.WriteLine(CheckForTheSameRightDigit(11, 12, 10));
+
+            Console.WriteLine("-----------------------------------------------------------------");
+            Console.ReadKey();
+        }
+
+        private static bool CheckForTheSameRightDigit(int x, int y, int z)
+        {
+            var resultX = x % 10;
+            var resultY = y % 10;
+            var resultZ = z % 10;
+
+            return resultX == resultY || resultY == resultZ || resultX == resultZ;
         }
 
         private static bool CheckTheIncreasingOrder(int x, int y, int z, bool flag)
